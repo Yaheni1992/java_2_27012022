@@ -1,5 +1,6 @@
 package lesson1;
 
+
 public class Cat implements Runnable, Jumpable{
     @Override
     public void run() {

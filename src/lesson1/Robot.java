@@ -6,6 +6,7 @@ public class Robot implements Runnable, Jumpable{
         System.out.println("Robot run");
     }
 
+
     @Override
     public void jump() {
         System.out.println("Robot jump");
