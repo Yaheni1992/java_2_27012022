@@ -2,21 +2,23 @@ package lesson1;
 
 public class Main {
     public static void main(String[] args) {
-        Runnable[] runnables = new Runnable[]{
-                new Cat(),
-                new Person(),
-                new Robot()
+
+        Member[] members = {
+                new Robot(10, 12),
+                new Cat(10, 11),
+                new Person(10, 10),
+
         };
-        for (int i = 0; i < runnables.length; i++) {
-            runnables[i].run();
-        }
-        Jumpable[] jumpables = new Jumpable[]{
-                new Cat(),
-                new Person(),
-                new Robot()
+        let[] lets = {
+                new Wall(10),
+                new Treadmill(10)
         };
-        for (int i = 0; i < jumpables.length; i++) {
-            jumpables[i].jump();
+        for (Member e : members) {
+            for (let l :lets) {
+                if(!l.can(e)){
+                    continue;
+                }
+            }
         }
     }
 }
